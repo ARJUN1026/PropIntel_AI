@@ -32,7 +32,7 @@ export function createApp() {
   app.use(express.json({ limit: '2mb' }));
   app.use(morgan('dev'));
 
-  app.get('/health', (_req, res) => {
+  app.get('/health', (_req: express.Request, res: express.Response) => {
     res.json({ success: true, message: 'PropIntel AI API is running', code: 'OK' });
   });
 
