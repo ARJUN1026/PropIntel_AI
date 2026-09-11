@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MessageSquareText, X, SendHorizonal, Loader2, Sparkles, Zap, Mic, MicOff, Volume2 } from 'lucide-react';
+import { X, SendHorizonal, Loader2, Sparkles, Zap, Mic, MicOff, Volume2 } from 'lucide-react';
 import { useQueryClient } from '@tanstack/react-query';
 import { aiApi, savedApi, leadApi, analyticsApi, visitApi } from '../api';
 import type { ChatReply, SearchResultDoc } from '../types';
