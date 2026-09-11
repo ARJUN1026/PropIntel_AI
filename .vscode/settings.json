@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\arjun\\AppData\\Roaming\\npm;C:\\Users\\arjun\\OneDrive\\Desktop\\PROJECTS\\PropIntel AI;${env:PATH}"
+  }
+}

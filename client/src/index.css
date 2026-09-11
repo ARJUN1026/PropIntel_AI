@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-canvas font-body text-ink;
+  }
+
+  ::selection {
+    @apply bg-brass-200 text-paper;
+  }
+
+  /* Quiet, brand-toned scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(27, 28, 30, 0.18) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(27, 28, 30, 0.16);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  /* Tabular numerals wherever figures align (tables, stats, scores) */
+  .nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
