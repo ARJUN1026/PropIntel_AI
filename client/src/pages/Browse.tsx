@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Sparkles, SlidersHorizontal, X, ArrowUpDown, Loader2 } from 'lucide-react';
 import { propertyApi, aiApi, savedApi, errMessage, type PropertyFilters } from '../api';
@@ -51,7 +51,7 @@ export function BrowsePage() {
 
   const savedQuery = useQuery({ queryKey: ['saved-ids'], queryFn: () => savedApi.list(), enabled: true });
 
-  useMemo(() => {
+  useEffect(() => {
     if (savedQuery.data) setSavedIds(new Set(savedQuery.data.items.map(p => p._id)));
   }, [savedQuery.data]);
 
